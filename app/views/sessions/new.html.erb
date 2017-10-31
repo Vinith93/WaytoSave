@@ -1,0 +1,23 @@
+<% provide(:title, "Login Page") %>
+<div class="conatiner-fluid text-center jumbotron">
+<h1> Login Page </h1>
+<%= form_tag sessions_path %>
+<div class="container">
+<div class="field">
+<%= label_tag :email_or_login %><br />
+<%= text_field_tag :email %>
+</div>
+<div class="field">
+<%= label_tag :password %><br />
+<%= password_field_tag :password %>
+</div><br />
+<div class="button">
+<%= submit_tag 'Sign In' %>
+</div><br />
+<mark>
+<%= link_to 'Sign Up', new_user_path %>
+</mark>
+</div>
+<%= calendar number_of_days: 7 do |date| %>
+  <%= date %>
+<% end %>
